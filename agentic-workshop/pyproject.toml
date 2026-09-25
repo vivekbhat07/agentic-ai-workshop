@@ -1,0 +1,23 @@
+[project]
+name = "agentic-workshop"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+# Lets tests import the Session 2, Session 3 and capstone packages directly.
+pythonpath = ["session2_workflows", "session3_testing", "capstone_gemini"]
+testpaths = ["session3_testing/tests", "capstone_gemini/trip_tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/F = pycodestyle + pyflakes, I = import sorting, B = bugbear, UP = pyupgrade
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+mypy_path = ["session2_workflows", "session3_testing", "capstone_gemini"]

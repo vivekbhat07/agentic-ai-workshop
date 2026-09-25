@@ -1,0 +1,13 @@
+# Core
+langgraph>=0.3          # needs interrupt() + Command for the capstone
+pydantic>=2.6
+python-dotenv>=1.0
+
+# Optional: only needed if you want to call a real model
+google-genai>=1.0       # Gemini (capstone default when GEMINI_API_KEY is set)
+openai>=1.40
+
+# Dev tooling (Session 3)
+pytest>=8.0
+ruff>=0.5
+mypy>=1.10
